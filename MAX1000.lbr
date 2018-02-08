@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -44,7 +44,7 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
@@ -77,12 +77,12 @@
 <wire x1="12.505" y1="30.77" x2="12.505" y2="-30.77" width="0.127" layer="21"/>
 <wire x1="12.505" y1="-30.77" x2="-12.505" y2="-30.77" width="0.127" layer="21"/>
 <wire x1="-12.505" y1="-30.77" x2="-12.505" y2="30.77" width="0.127" layer="21"/>
-<dimension x1="3.81" y1="30.77" x2="3.81" y2="-30.77" x3="17.78" y3="0" textsize="1.27" layer="21"/>
-<dimension x1="-12.505" y1="30.77" x2="12.505" y2="30.77" x3="0" y3="33.655" textsize="1.27" layer="21"/>
-<hole x="-10.42" y="28.685" drill="4.1"/>
-<hole x="10.42" y="28.685" drill="4.1"/>
-<hole x="10.42" y="-28.685" drill="4.1"/>
-<hole x="-10.42" y="-28.685" drill="4.1"/>
+<dimension x1="3.81" y1="30.77" x2="3.81" y2="-30.77" x3="17.78" y3="0" textsize="1.27" layer="47"/>
+<dimension x1="-12.505" y1="30.77" x2="12.505" y2="30.77" x3="0" y3="33.655" textsize="1.27" layer="47"/>
+<hole x="-10.16" y="28.425" drill="3.2"/>
+<hole x="10.16" y="28.425" drill="3.2"/>
+<hole x="10.16" y="-28.425" drill="3.2"/>
+<hole x="-10.16" y="-28.425" drill="3.2"/>
 <pad name="PMOD_6" x="-6.35" y="-27.305" drill="0.9"/>
 <pad name="PMOD_5" x="-3.81" y="-27.305" drill="0.9"/>
 <pad name="PMOD_4" x="-1.27" y="-27.305" drill="0.9"/>
@@ -148,6 +148,29 @@
 <text x="5.08" y="-26.162" size="0.6096" layer="21" ratio="16">PMOD_1</text>
 <text x="6.858" y="-24.892" size="0.6096" layer="21" ratio="16">J2_1</text>
 <text x="5.08" y="-6.35" size="0.6096" layer="21" ratio="16">JTAG_6</text>
+<polygon width="0.127" layer="39">
+<vertex x="-11.43" y="10.16"/>
+<vertex x="-6.35" y="10.16"/>
+<vertex x="-6.35" y="1.27"/>
+<vertex x="-8.255" y="1.27"/>
+<vertex x="-8.255" y="-0.635"/>
+<vertex x="-8.255" y="-26.67"/>
+<vertex x="-11.43" y="-26.67"/>
+</polygon>
+<polygon width="0.127" layer="39">
+<vertex x="6.35" y="10.16"/>
+<vertex x="11.43" y="10.16"/>
+<vertex x="11.43" y="-26.67"/>
+<vertex x="8.255" y="-26.67"/>
+<vertex x="8.255" y="-6.35"/>
+<vertex x="6.35" y="-6.35"/>
+</polygon>
+<polygon width="0.127" layer="39">
+<vertex x="-7.62" y="-26.035"/>
+<vertex x="7.62" y="-26.035"/>
+<vertex x="7.62" y="-31.115"/>
+<vertex x="-7.62" y="-31.115"/>
+</polygon>
 </package>
 </packages>
 <symbols>
@@ -180,6 +203,7 @@
 <text x="15.24" y="-11.43" size="1" layer="94" font="vector" ratio="16">BANK2</text>
 <text x="15.24" y="8.89" size="1" layer="94" font="vector" ratio="16">BANK1A</text>
 <text x="0" y="-20.32" size="1.27" layer="95" font="vector">&gt;NAME</text>
+<text x="14.478" y="17.272" size="1.016" layer="94" ratio="12">NO I/O</text>
 </symbol>
 <symbol name="MAX1000_REV2_J2">
 <pin name="+5V" x="-20.32" y="15.24" length="middle"/>
@@ -239,6 +263,7 @@
 <wire x1="-10.16" y1="-1.27" x2="13.97" y2="-1.27" width="0.254" layer="94"/>
 <wire x1="13.97" y1="-1.27" x2="13.97" y2="6.35" width="0.254" layer="94"/>
 <text x="-7.62" y="-5.08" size="1.27" layer="95" font="vector">&gt;NAME</text>
+<text x="3.302" y="4.572" size="1.016" layer="94" ratio="12">NO I/O</text>
 </symbol>
 <symbol name="MAX1000_REV2_JTAG">
 <pin name="GND" x="-7.62" y="5.08" length="middle"/>
